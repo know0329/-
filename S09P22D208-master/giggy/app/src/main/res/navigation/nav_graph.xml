@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools   "
+    xmlns:tools1="http://schemas.android.com/tools"
+    app:startDestination="@id/LoginFragment"
+    android:id="@+id/nav_graph">
+
+
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.d208.giggy.view.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home">
+
+
+        <action
+            android:id="@+id/action_HomeFragment_to_ConsumeAnalysisFragment"
+            app:destination="@id/ConsumeAnalysisFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_HomeFragment_to_CommunityHomeFragment"
+            app:destination="@id/CommunityHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_HomeFragment_to_TransactionHistoryFragment"
+            app:destination="@id/TransactionHistoryFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment"
+            app:popUpTo="@id/HomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_HomeFragment_to_GameFragment"
+            app:destination="@id/GameFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_RankFragment"
+            app:destination="@id/RankFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_SettingFragment"
+            app:destination="@id/SettingFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.d208.giggy.view.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login">
+
+
+        <action
+            android:id="@+id/action_LoginFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment"
+            app:popUpTo="@id/LoginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_LoginFragment_to_SignUpFragment"
+            app:destination="@id/SignUpFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignUpFragment"
+        android:name="com.d208.giggy.view.SignUpFragment"
+        android:label="signUp"
+        tools:layout="@layout/fragment_sign_up">
+
+
+        <action
+            android:id="@+id/action_SignUpFragment_to_SignUpNextFragment"
+            app:destination="@id/SignUpNextFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignUpCompleteFragment"
+        android:name="com.d208.giggy.view.SignUpCompleteFragment"
+        android:label="signUpComplete"
+        tools:layout="@layout/fragment_sign_up_complete">
+
+
+        <action
+            android:id="@+id/action_SignUpCompleteFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ConsumeAnalysisFragment"
+        android:name="com.d208.giggy.view.ConsumeAnalysisFragment"
+        android:label="consumeAnalysis"
+        tools:layout="@layout/fragment_consume_analysis">
+
+        <action
+            android:id="@+id/action_ConsumeAnalysisFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment"
+            app:popUpTo="@id/ConsumeAnalysisFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CommunityHomeFragment"
+        android:name="com.d208.giggy.view.CommunityHomeFragment"
+        android:label="communityHome"
+        tools1:layout="@layout/fragment_community_home">
+
+        <action
+            android:id="@+id/action_CommunityHomeFragment_to_CommunityPostRegisterFragment"
+            app:destination="@id/CommunityPostRegisterFragment" />
+        <action
+            android:id="@+id/action_CommunityHomeFragment_to_CommunityPostDetailFragment"
+            app:destination="@id/CommunityPostDetailFragment" />
+        <action
+            android:id="@+id/action_CommunityHomeFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment"
+            app:popUpTo="@id/CommunityHomeFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignUpNextFragment"
+        android:name="com.d208.giggy.view.SignUpNextFragment"
+        android:label="signUpNext"
+        tools1:layout="@layout/fragment_sign_up_next">
+
+
+        <action
+            android:id="@+id/action_SignUpNextFragment_to_SignUpCompleteFragment"
+            app:destination="@id/SignUpCompleteFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CommunityPostRegisterFragment"
+        android:name="com.d208.giggy.view.CommunityPostRegisterFragment"
+        android:label="communityPostRegister"
+        tools1:layout="@layout/fragment_community_post_register">
+
+        <action
+            android:id="@+id/action_CommunityPostRegisterFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment"
+            app:popUpTo="@id/CommunityPostRegisterFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CommunityPostDetailFragment"
+        android:name="com.d208.giggy.view.CommunityPostDetailFragment"
+        android:label="communityPostDetail"
+        tools1:layout="@layout/fragment_community_post_detail">
+
+
+        <action
+            android:id="@+id/action_CommunityPostDetailFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment"
+            app:popUpTo="@id/CommunityPostDetailFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_CommunityPostDetailFragment_to_CommunityPostRegisterFragment"
+            app:destination="@id/CommunityPostRegisterFragment"
+            app:popUpTo="@id/CommunityPostDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TransactionHistoryFragment"
+        android:name="com.d208.giggy.view.TransactionHistoryFragment"
+        android:label="transactionHistory"
+        tools1:layout="@layout/fragment_transaction_history">
+
+
+        <action
+            android:id="@+id/action_TransactionHistoryFragment_to_TransactionDetailFragment"
+            app:destination="@id/TransactionDetailFragment" />
+        <action
+            android:id="@+id/action_TransactionHistoryFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment"
+            app:popUpTo="@id/TransactionHistoryFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TransactionDetailFragment"
+        android:name="com.d208.giggy.view.TransactionDetailFragment"
+        android:label="transactionDetail"
+        tools1:layout="@layout/fragment_transaction_detail">
+
+
+        <action
+            android:id="@+id/action_TransactionDetailFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment"
+            app:popUpTo="@id/TransactionDetailFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ErrorFragment"
+        android:name="com.d208.giggy.view.ErrorFragment"
+        android:label="error"
+        tools1:layout="@layout/fragment_error">
+
+        <action
+            android:id="@+id/action_ErrorFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="com.d208.giggy.view.GameFragment"
+        android:label="game"
+        tools1:layout="@layout/fragment_game">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RankFragment"
+        android:name="com.d208.giggy.view.RankFragment"
+        android:label="rank"
+        tools1:layout="@layout/fragment_rank">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/SettingFragment"
+        android:name="com.d208.giggy.view.SettingFragment"
+        android:label="setting"
+        tools1:layout="@layout/fragment_setting">
+
+
+        <action
+            android:id="@+id/action_SettingFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:popUpTo="@id/SettingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

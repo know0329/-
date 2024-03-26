@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/background"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.GameFragment">
+
+
+        <ImageView
+            android:id="@+id/fragment_game_back"
+            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/fragment_game_crown_image_view"
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_king"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_game_back"
+            />
+        <TextView
+            android:id="@+id/fragment_game_ranK_title_text_view"
+            android:layout_marginStart="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이번주 TOP 10"
+            style="@style/Title.Bold.Size32"
+            app:layout_constraintStart_toStartOf="@+id/fragment_game_crown_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_game_crown_image_view"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="16dp"
+            android:id="@+id/fragment_game_rank_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/sub"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="@+id/fragment_game_ranK_title_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_game_ranK_title_text_view">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_game_rank_top_10_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_game_rank"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/fragment_my_score_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 점수"
+            style="@style/Title.Bold.Size32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_game_rank_card_view"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="16dp"
+            android:id="@+id/fragment_game_my_score_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/sub"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_my_score_title_text_view"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/fragment_game_current_my_rank_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="현재 순위"
+                    style="@style/Text.regular.Size16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+
+                    android:id="@+id/fragment_game_current_my_rank_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 0위"
+                    style="@style/Text.regular.Size16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/fragment_game_current_my_highest_score_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최고 점수"
+                    style="@style/Text.regular.Size16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_game_current_my_rank_title_text_view"
+                    />
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/fragment_game_current_my_highest_score_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 0점"
+                    style="@style/Text.regular.Size16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_game_current_my_rank_text_view"
+                    />
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/fragment_game_current_life_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="남은 도전 횟수"
+                    style="@style/Text.regular.Size16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_game_current_my_highest_score_title_text_view"
+                    />
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="196dp"
+                    android:id="@+id/fragment_game_current_life_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 0회"
+                    style="@style/Text.regular.Size16"
+                    app:layout_constraintStart_toEndOf="@+id/fragment_game_current_my_highest_score_title_text_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_game_current_my_highest_score_text_view"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/game_start"
+            style="@style/Text.regular.Size32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_box"
+            android:backgroundTint="@color/main"
+            android:text="게임 시작"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_game_my_score_card_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

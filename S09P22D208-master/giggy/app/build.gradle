@@ -1,0 +1,123 @@
+import com.d208.buildsrc.DaggerHilt
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id ("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
+
+}
+
+android {
+    namespace 'com.d208.giggy'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.d208.giggy"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures{
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation (project (":data"))
+    implementation (project (":domain"))
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation "androidx.security:security-crypto-ktx:1.1.0-alpha03"
+    implementation 'com.github.CenkGun:ChatBar:1.0.5'
+    //dagger-hilt
+    implementation (com.d208.buildsrc.DaggerHilt.DAGGER_HILT)
+    kapt (com.d208.buildsrc.DaggerHilt.DAGGER_HILT_COMPILER)
+    kapt (com.d208.buildsrc.DaggerHilt.DAGGER_HILT_ANDROIDX_COMPILER)
+
+
+
+    //kakao
+    implementation(com.d208.buildsrc.KaKao.KAKAO_LOGIN)
+
+
+
+    // LiveData
+    implementation(com.d208.buildsrc.ViewModel.LIVEDATA)
+
+    //nav component
+//    implementation(com.d208.buildsrc.NavComponent.NAVIGATION_COMPOSE)
+    implementation(com.d208.buildsrc.NavComponent.NAVIGATION_FRAGMENT)
+//    implementation(com.d208.buildsrc.NavComponent.NAVIGATION_DYNAMIC_FEATURES_FRAGMENT)
+    implementation(com.d208.buildsrc.NavComponent.NAVIGATION_UI)
+    //by viewModel
+    implementation (com.d208.buildsrc.AndroidX.ACTIVITY)
+    implementation(com.d208.buildsrc.AndroidX.FRAGMENT)
+
+    // Retrofit
+    implementation (com.d208.buildsrc.Retrofit.RETROFIT)
+    implementation (com.d208.buildsrc.Retrofit.CONVERTER_GSON)
+    implementation (com.d208.buildsrc.Retrofit.CONVERTER_JAXB)
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    //okHttp
+    implementation (com.d208.buildsrc.OkHttp.OKHTTP)
+    implementation (com.d208.buildsrc.OkHttp.LOGGING_INTERCEPTOR)
+
+    //coroutines
+    implementation (com.d208.buildsrc.Coroutines.COROUTINES)
+
+
+    //FCM
+
+//    implementation(com.d208.buildsrc.Firebase.FIREBASE_ANALYTICS)
+//    implementation(com.d208.buildsrc.Firebase.FIREBASE_MESSAING)
+    implementation(com.d208.buildsrc.Firebase.FIREBASE_MESSAGING_KTX)
+    implementation(com.d208.buildsrc.Firebase.FIREBASE_BOM_KTX)
+
+    implementation(com.d208.buildsrc.Library.LOADING)
+    implementation(com.d208.buildsrc.Library.LOADING_SPINEER)
+    implementation(com.d208.buildsrc.Library.ANIMATION)
+    implementation(com.d208.buildsrc.Library.PIE_GRAPH)
+    implementation(com.d208.buildsrc.Library.LOTTIE)
+    implementation(com.d208.buildsrc.Library.SEARCH_BAR)
+    implementation(com.d208.buildsrc.AndroidX.FRAGMENT)
+    implementation(com.d208.buildsrc.Library.DROPDOWN)
+    implementation(com.d208.buildsrc.Library.GLIDE)
+
+
+    //unity
+    implementation project(':unityLibrary')
+    implementation fileTree(dir: project(':unityLibrary').getProjectDir().toString() + ('\\libs'), include: ['*.jar'])
+
+    //gif
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //
+    implementation(com.d208.buildsrc.Library.TEDPERMISSION)
+
+}

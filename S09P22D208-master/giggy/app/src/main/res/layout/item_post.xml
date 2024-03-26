@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/item_post_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="[꿀팁]"
+        style="@style/Text.regular.Size20"
+        />
+
+    <TextView
+        android:layout_marginStart="8dp"
+        android:id="@+id/item_post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_post_tab"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="나만의 절약 꿀팁"
+        style="@style/Text.regular.Size20"
+        />
+    <TextView
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/item_post_writer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        app:layout_constraintStart_toStartOf="@+id/item_post_tab"
+        app:layout_constraintTop_toBottomOf="@+id/item_post_tab"
+        style="@style/Text.regular.Size12"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_marginTop="4dp"
+        android:id="@+id/item_post_like"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/heart_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/item_post_writer_name"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:id="@+id/item_post_write_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023.01.01"
+        app:layout_constraintEnd_toStartOf="@+id/item_post_like"
+        app:layout_constraintBottom_toBottomOf="@+id/item_post_writer_name"
+        />
+
+    <View
+        android:layout_marginVertical="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_post_write_time"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

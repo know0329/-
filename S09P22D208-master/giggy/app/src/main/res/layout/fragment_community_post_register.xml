@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/background"
+        tools:context="com.d208.giggy.view.CommunityPostRegisterFragment">
+
+
+        <ImageView
+            android:layout_marginTop="16dp"
+            android:id="@+id/fragment_community_post_register_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/fragment_community_post_register_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="게시글 작성"
+            style="@style/Title.Bold.Size32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/fragment_community_post_register_title_text_view"
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목"
+            style="@style/Text.regular.Size20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_text_view" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:id="@+id/fragment_community_post_register_title_edit_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_box"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_title_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:layout_marginTop="24dp"
+            android:id="@+id/fragment_community_post_register_category_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            style="@style/Text.regular.Size20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_title_edit_view"
+            />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/fragment_community_post_register_post_tab_layout"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/background"
+            app:tabIndicatorColor="@color/main"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/main"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_category_text_view">
+
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자유"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="꿀팁"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자랑"
+                />
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+
+        <HorizontalScrollView
+            android:id="@+id/fragment_community_post_register_chip_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_post_tab_layout"
+            >
+
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_marginStart="8dp"
+
+                android:id="@+id/fragment_community_post_register_chip_group"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                app:singleSelection="true"
+                android:layout_height="wrap_content"
+                app:singleLine="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fragment_community_post_register_food_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipBackgroundColor="@color/main"
+                    android:text="식비"
+                    app:chipStrokeColor="@color/background"
+                    app:chipIconEnabled="true"
+                    app:rippleColor="@color/main"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:checkable="true"
+                    app:checkedIcon="@drawable/ic_food"
+                    app:chipIconSize="28dp"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fragment_community_post_register_traffic_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipStrokeColor="@color/background"
+                    android:background="@color/main"
+                    app:chipBackgroundColor="@color/main"
+                    android:text="교통"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    app:rippleColor="@color/main"
+                    app:chipIconSize="28dp"
+                    app:checkedIcon="@drawable/ic_traffic"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fragment_community_post_register_leisure_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipStrokeColor="@color/background"
+                    android:background="@color/main"
+                    app:chipBackgroundColor="@color/main"
+                    android:text="여가"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    app:rippleColor="@color/main"
+                    app:chipIconSize="28dp"
+                    app:checkedIcon="@drawable/ic_leisure"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fragment_community_post_register_shopping_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipStrokeColor="@color/background"
+                    android:background="@color/main"
+                    android:text="쇼핑"
+                    app:chipBackgroundColor="@color/main"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    app:rippleColor="@color/main"
+                    app:chipIconSize="28dp"
+                    app:checkedIcon="@drawable/ic_shopping"
+                    />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fragment_community_post_register_fixed_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipStrokeColor="@color/background"
+                    android:background="@color/main"
+                    android:text="고정지출"
+                    app:chipBackgroundColor="@color/main"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    app:rippleColor="@color/main"
+                    app:chipIconSize="28dp"
+                    app:checkedIcon="@drawable/ic_fixed_expenses"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fragment_community_post_register_selfdev_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipStrokeColor="@color/background"
+                    android:background="@color/main"
+                    android:text=" 자기계발"
+                    app:chipBackgroundColor="@color/main"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    app:rippleColor="@color/main"
+                    app:chipIconSize="28dp"
+                    app:checkedIcon="@drawable/ic_selfdev"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fragment_community_post_register_etc_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipStrokeColor="@color/background"
+                    android:background="@color/main"
+                    app:chipBackgroundColor="@color/main"
+                    android:text="기타"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    app:rippleColor="@color/main"
+                    app:chipIconSize="28dp"
+                    app:checkedIcon="@drawable/ic_etc"
+                    />
+
+
+
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/fragment_community_post_register_content_text_view"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내용"
+            style="@style/Text.regular.Size20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_chip_scroll" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:id="@+id/fragment_community_post_register_content_edit_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/content_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_content_text_view"
+            />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/fragment_community_post_register_photo_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진"
+            style="@style/Text.regular.Size20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_content_edit_view"
+            />
+        
+
+
+      <ImageView
+          android:layout_marginTop="16dp"
+          android:id="@+id/fragment_community_post_register_image_view"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/image_add_button"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_photo_text_view"
+          />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_community_post_register_post_button"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_box"
+            android:text="작성 완료"
+            android:textColor="@color/white"
+            style="@style/Text.regular.Size20"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_image_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_community_post_update_post_button"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_box"
+            android:text="수정"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            style="@style/Text.regular.Size20"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_community_post_register_image_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

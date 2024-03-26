@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginVertical="8dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_transaction_category_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_food"
+        />
+
+    <LinearLayout
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/item_transaction_consume_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="식비"
+            android:fontFamily="@font/the_jamsil_3_regular"
+            />
+        <TextView
+            android:id="@+id/item_transaction_consume_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2023.05.01"
+            android:fontFamily="@font/the_jamsil_3_regular"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_transaction_consume_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="200,000원"
+        android:fontFamily="@font/the_jamsil_3_regular"
+        android:textSize="24sp"
+        android:gravity="end"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/dialog_category_choose_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카테고리 변경"
+        style="@style/Title.Bold.Size32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="64dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_category_choose_title_text_view">
+
+        <LinearLayout
+            android:layout_marginVertical="12dp"
+            android:id="@+id/dialog_category_choose_food_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_food"
+                />
+            <TextView
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="식비"
+                style="@style/Text.regular.Size32"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginVertical="12dp"
+            android:id="@+id/dialog_category_choose_traffic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_traffic"
+                />
+            <TextView
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="교통"
+                style="@style/Text.regular.Size32"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginVertical="12dp"
+            android:id="@+id/dialog_category_choose_leisure_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_leisure"
+                />
+            <TextView
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="여가"
+                style="@style/Text.regular.Size32"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginVertical="12dp"
+            android:id="@+id/dialog_category_choose_shopping_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shopping"
+                />
+            <TextView
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="쇼핑"
+                style="@style/Text.regular.Size32"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginVertical="12dp"
+            android:id="@+id/dialog_category_choose_fixed_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_fixed_expenses"
+                />
+            <TextView
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="고정 지출"
+                style="@style/Text.regular.Size32"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginVertical="12dp"
+            android:id="@+id/dialog_category_choose_etc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_etc"
+                />
+            <TextView
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="기타"
+                style="@style/Text.regular.Size32"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

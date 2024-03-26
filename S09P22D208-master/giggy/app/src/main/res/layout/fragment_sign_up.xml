@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context="com.d208.giggy.view.SignUpFragment">
+
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/fragment_sign_up_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추가 정보 입력 (1/2)"
+        android:textSize="36sp"
+        android:textColor="@color/main"
+        android:fontFamily="@font/the_jamsil_4_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:layout_marginTop="12dp"
+        android:id="@+id/fragment_sign_up_sub_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/the_jamsil_2_light"
+        android:text="회원 가입을 위해 정보를 입력하세요"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_text_view"
+        app:layout_constraintStart_toStartOf="@+id/fragment_sign_up_text_view"
+        />
+
+    <TextView
+        android:layout_marginTop="60dp"
+        android:id="@+id/fragment_sign_up_nick_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/the_jamsil_2_light"
+        android:textSize="16dp"
+        android:textColor="@color/main"
+        android:text="닉네임"
+        app:layout_constraintStart_toStartOf="@+id/fragment_sign_up_sub_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_sub_text_view"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/fragment_sign_up_nick_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:hint="김땡땡"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_sign_up_nick_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_nick_name_text_view" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/fragment_sign_up_target_amount_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/the_jamsil_2_light"
+        android:textSize="16dp"
+        android:textColor="@color/main"
+        android:text="목표 소비액 설정"
+        app:layout_constraintStart_toStartOf="@+id/fragment_sign_up_nick_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_nick_name_edit_text"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/fragment_sign_up_target_amount_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stepSize="1"
+        android:value="10"
+        android:valueFrom="1"
+        android:valueTo="100"
+        app:thumbColor="@color/main"
+        app:trackColorInactive="@color/white"
+        app:trackColorActive="@color/main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_target_amount_edit_text" />
+
+    <TextView
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/fragment_sign_up_target_amount_edit_text"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="10만원"
+        android:inputType="phone"
+        android:background="@drawable/edit_text_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/fragment_sign_up_nick_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_target_amount_text_view"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fragment_sign_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="다음"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/the_jamsil_3_regular"
+        android:textSize="20sp"
+        android:background="@drawable/button_box"
+        android:backgroundTint="@color/main"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_sing_up_back_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/fragment_sing_up_back_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/the_jamsil_2_light"
+            android:textSize="16dp"
+            android:text="이미 등록된 회원이신가요?"
+            />
+
+        <TextView
+            android:id="@+id/fragment_sign_up_back_login_text_view"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/the_jamsil_2_light"
+            android:text="여기를 클릭하세요"
+            android:textSize="16dp"
+            android:textColor="@color/main" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/box_1_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

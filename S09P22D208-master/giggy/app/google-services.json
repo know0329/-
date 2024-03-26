@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797093009141",
+    "project_id": "giggy-28e48",
+    "storage_bucket": "giggy-28e48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797093009141:android:3f043948d6d62447b197bc",
+        "android_client_info": {
+          "package_name": "com.d208.giggy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgs92KgFfPuQf7Mct_TBIRf2CWCLuYc4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

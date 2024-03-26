@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.SettingFragment">
+
+   <LinearLayout
+       android:layout_marginTop="60dp"
+       android:id="@+id/fragment_target_amount_change_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       >
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/baseline_edit_24"
+           />
+       <TextView
+           android:gravity="end"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="목표 금액 수정하기"
+           android:fontFamily="@font/the_jamsil_3_regular"
+           android:textSize="24sp"
+           />
+
+   </LinearLayout>
+
+    <TextView
+        android:layout_marginBottom="64dp"
+        android:id="@+id/fragment_setting_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        style="@style/Title.Bold.Size32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_target_amount_change_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginBottom="24dp">
+
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/dialog_target_amount_change_current_amount_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 목표 금액"
+        android:fontFamily="@font/the_jamsil_4_medium"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/dialog_target_amount_change_current_amount_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0원"
+        android:fontFamily="@font/the_jamsil_3_regular"
+        android:textSize="48sp"
+        android:textColor="@color/main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_target_amount_change_current_amount_title_text_view"
+        />
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/dialog_target_amount_change_next_amount_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="변경 목표 금액"
+        android:fontFamily="@font/the_jamsil_4_medium"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_target_amount_change_current_amount_text_view"
+        />
+
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/dialog_target_amount_change_next_amount_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100,000원"
+        android:fontFamily="@font/the_jamsil_3_regular"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_target_amount_change_next_amount_title_text_view"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:layout_marginTop="16dp"
+        android:id="@+id/dialog_target_amount_change_target_amount_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stepSize="1"
+        android:value="10"
+        android:valueFrom="1"
+        android:valueTo="100"
+        app:thumbColor="@color/black"
+        app:trackColorInactive="@color/white"
+        app:trackColorActive="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_target_amount_change_next_amount_text_view" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="48dp"
+        style="@style/Title.Bold.Size32"
+        android:id="@+id/dialog_target_amount_change_update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_box"
+
+        android:backgroundTint="@color/gray"
+        android:text="변경"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_target_amount_change_target_amount_slider"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="32dp"
+        style="@style/Title.Bold.Size32"
+        android:id="@+id/dialog_target_amount_change_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_box"
+
+        android:backgroundTint="@color/sub"
+        android:text="취소"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_target_amount_change_update_button"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
